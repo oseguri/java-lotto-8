@@ -114,15 +114,11 @@
     - [x] 구입 금액 검증
     - [x] 당첨 번호 검증
     - [x] 보너스 번호 검증 
-- [ ]  class LottoGenerator
-    - [ ]  test
-        - [ ]  Lotto 객체 생성 테스트
-    - [ ]  feature
-        - [ ]  랜덤 번호 6개 생성
-        - [ ]  Lotto 객체 생성
-- [ ]  class Lotto
-    - [ ]  test
-        - [ ]  번호 개수 검증 테스트
+- [x]  class LottoGenerator
+    - [x]  feature
+        - [x] 랜덤 번호 6개 생성
+        - [x] 랜덤 번호 6개 출력
+        - [x] Lotto 객체 생성
 - [ ]  class LottoCalculator
     - [ ]  test
         - [ ]  클래스 생성 테스트
