@@ -1,12 +1,13 @@
 package lotto;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Collectors;
 
 public class InputValidator {
+
+    //NULL 처리
+    private static final String NULL_ERR = "[ERROR] 입력값이 없습니다.";
     //구입 금액
     private static final String INT_ERR = "[ERROR] 구입 금액은 정수여야 합니다.";
     private static final String ZERO_ERR = "[ERROR] 구입 금액은 1000원 이상이여야 합니다.";
@@ -34,8 +35,13 @@ public class InputValidator {
         }
     }
 
+    private static void isNull(String value) {
+        if(value == null) throw new IllegalArgumentException(NULL_ERR);
+    }
+
 
     public static void validatePrice(String value) {
+        isNull(value);
         isInteger(value, INT_ERR);
         int num = Integer.parseInt(value);
         isNotZero(num);
@@ -49,7 +55,8 @@ public class InputValidator {
     }
 
 
-    public static void isValidWinNum(String value) {
+    public static void validateWinNum(String value) {
+        isNull(value);
         isValidWinNumForm(value);
         isWinNumValidRange(value);
         isWinNumNotDuplicate(value);
@@ -72,7 +79,8 @@ public class InputValidator {
     }
 
 
-    public static void isBonusValid(String value) {
+    public static void validateBonus(String value) {
+        isNull(value);
         isInteger(value, BONUS_NUM_INT_ERR);
         isNumInRange(value, 1, 45, BONUS_NUM_RANGE_ERR);
     }

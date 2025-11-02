@@ -25,10 +25,10 @@ public class InputValidatorTest {
     @CsvSource(value = {":false"," :false", "1,2,3,4,2,3:false", "1,2,3:false", "a,b,c,d,e,f:false", "1|2|3|4|5|6:false","1234:false","1,2,3,4,5,6:true","1,15,17,19,40,45:true"}, delimiter = ':')
     void winNumberValidationTest(String input, String set) {
         if(set.equals("false")) {
-            assertThatThrownBy(() -> InputValidator.isValidWinNum(input))
+            assertThatThrownBy(() -> InputValidator.validateWinNum(input))
                     .isInstanceOf(IllegalArgumentException.class);
         }else if(set.equals("true")) {
-            assertThatCode(() -> InputValidator.isValidWinNum(input))
+            assertThatCode(() -> InputValidator.validateWinNum(input))
                     .doesNotThrowAnyException();
         }
     }
