@@ -102,17 +102,9 @@
     - [ ] 통합 테스트
   - [ ] feat
     - [ ] 전체 기능 수행
-- [ ]  class InputManager
-    - [ ]  test
-        - [ ]  구입 금액 검증
-        - [ ]  당첨 번호 검증
-        - [ ]  보너스 번호 검증
-    - [ ]  feature
-        - [ ]  입력 기능
-        - [ ]  검증
-            - [ ]  구입 금액 검증
-            - [ ]  당첨 번호 검증
-            - [ ]  보너스 번호 검증
+- [x]  class InputManager
+    - [x]  feature
+        - [x]  입력 및 검증
 - [x] class InputValidator
   - [x] test
     - [x] 구입 금액 검증 
