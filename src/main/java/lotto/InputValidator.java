@@ -17,12 +17,12 @@ public class InputValidator {
     private static final String BONUS_NUM_INT_ERR = "[ERROR] 보너스 번호는 정수여야 합니다.";
     private static final String BONUS_NUM_RANGE_ERR = "[ERROR] 보너스 번호는 1~45사이여야 합니다.";
 
-    public static void isNumInRange(String value, int min, int max, String message) {
+    private static void isNumInRange(String value, int min, int max, String message) {
         int num = Integer.parseInt(value);
         if(!(min <= num && num <= max)) throw new IllegalArgumentException(message);
     }
 
-    public static void isInteger(String value, String message) {
+    private static void isInteger(String value, String message) {
         try{
             Integer.parseInt(value);
         }catch(NumberFormatException e) {
