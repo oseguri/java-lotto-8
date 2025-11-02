@@ -41,7 +41,7 @@ public class InputValidatorTest {
     @ParameterizedTest
     @CsvSource(value = {":false","a:false","46:false","0:false", "3:false", "7:true", "45:true"}, delimiter = ':')
     void bonusNumberValidationTest(String input, String set) {
-        List<String> nums = new ArrayList<>(Arrays.asList("1","2","3","4","5","6"));
+        List<Integer> nums = new ArrayList<>(Arrays.asList(1,2,3,4,5,6));
 
         if(set.equals("false")) {
             assertThatThrownBy(() -> InputValidator.validateBonus(input, nums))
