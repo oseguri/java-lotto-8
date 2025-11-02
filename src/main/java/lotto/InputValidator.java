@@ -79,13 +79,14 @@ public class InputValidator {
     }
 
 
-    public static void validateBonus(String value) {
+    public static void validateBonus(String value, List<String> winNums) {
         isNull(value);
         isInteger(value, BONUS_NUM_INT_ERR);
         isNumInRange(value, 1, 45, BONUS_NUM_RANGE_ERR);
+        isNotDupBonus(value, winNums);
     }
 
-    private static void isNotDupBonus(List<String> winNums, String value) {
+    private static void isNotDupBonus(String value,List<String> winNums) {
         if(winNums.contains(value)) throw new IllegalArgumentException(BONUS_DUPLICATE_ERR);
     }
 

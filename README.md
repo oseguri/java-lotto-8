@@ -113,11 +113,11 @@
             - [ ]  구입 금액 검증
             - [ ]  당첨 번호 검증
             - [ ]  보너스 번호 검증
-- [ ] class InputValidator
-  - [ ] test
+- [x] class InputValidator
+  - [x] test
     - [x] 구입 금액 검증 
-    - [ ] 당첨 번호 검증
-    - [ ] 보너스 번호 검증
+    - [x] 당첨 번호 검증
+    - [x] 보너스 번호 검증
   - [x] feat
     - [x] 구입 금액 검증
     - [x] 당첨 번호 검증
