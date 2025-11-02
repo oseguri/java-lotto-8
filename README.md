@@ -124,14 +124,12 @@
         - [ ]  클래스 생성 테스트
         - [ ]  Lotto 객체 결과 계산
         - [ ]  LottoResult 객체 생성 테스트
-    - [ ]  feature
-        - [ ]  lotto 객체 결과 계산
-        - [ ]  LottoResult 객체 생성
-- [ ]  class LottoResult
-    - [ ]  test
-        - [ ]  객체 생성 테스트
-    - [ ]  feature
-        - [ ]  결과 저장
+    - [x]  feature
+        - [x]  lotto 객체 결과 계산
+        - [x]  LottoResult 객체 생성
+- [x]  class LottoResult
+    - [x]  feature
+        - [x]  결과 저장
 - [ ]  class LottoResultPrinter
     - [ ]  feature
         - [ ]  출력
