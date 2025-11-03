@@ -29,7 +29,7 @@ public class LottoResult {
 
         for(int price : prices) {
             totalPrice += price;
-            if(price != 0) winningDetails.put(price, winningDetails.get(price) + 1);
+            if(winningDetails.containsKey(price)) winningDetails.put(price, winningDetails.get(price) + 1);
         }
         this.yield = ((double) totalPrice / purchasePrice) * 100;
     }

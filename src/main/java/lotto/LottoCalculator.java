@@ -9,7 +9,7 @@ public class LottoCalculator {
     private final static Map<Integer, Integer> winnerPrice = Map.of(
             6,2000000000
             ,5,1500000
-            ,4,500000
+            ,4,50000
             ,3,5000);
 
     public static LottoResult getResult(List<Lotto> lottoList, List<Integer> winNums, int bonusNum) {
@@ -31,7 +31,7 @@ public class LottoCalculator {
         if(!winnerPrice.containsKey(correctNum)) return 0;
 
         int price = winnerPrice.get(correctNum);
-        if(correctNum == 5 && lottoNums.contains(bonusNum)) price *= 200;
+        if(correctNum == 5 && lottoNums.contains(bonusNum)) price *= 20;
         return price;
     }
 }
