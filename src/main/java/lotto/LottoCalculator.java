@@ -28,7 +28,7 @@ public class LottoCalculator {
         });
 
         int correctNum = correct.get();
-        if(winnerPrice.containsKey(correctNum)) return 0;
+        if(!winnerPrice.containsKey(correctNum)) return 0;
 
         int price = winnerPrice.get(correctNum);
         if(correctNum == 5 && lottoNums.contains(bonusNum)) price *= 200;

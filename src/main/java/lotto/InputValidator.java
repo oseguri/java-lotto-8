@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 public class InputValidator {
 
     //NULL 처리
-    private static final String NULL_ERR = "[ERROR] 입력값이 없습니다.";
+    private static final String NULL_ERR = "입력값이 없습니다.";
     //구입 금액
     private static final String INT_ERR = "[ERROR] 구입 금액은 정수여야 합니다.";
     private static final String ZERO_ERR = "[ERROR] 구입 금액은 1000원 이상이여야 합니다.";

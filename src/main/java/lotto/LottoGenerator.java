@@ -8,6 +8,7 @@ import java.util.List;
 public class LottoGenerator {
 
     public static List<Lotto> generateList(int n) {
+        System.out.printf("%d개를 구매했습니다.\n", n);
         List<Lotto> lottoList = new ArrayList<>();
         for(int i = 0; i < n; i++) lottoList.add(generate());
         return lottoList;

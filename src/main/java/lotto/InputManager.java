@@ -13,26 +13,41 @@ public class InputManager {
 
 
     private static String getInput(String message) {
-        System.out.println(message);
+        System.out.println("\n" + message);
         return Console.readLine();
     }
 
     public static int getPrice() {
-        String input = getInput(PRICE_MESSAGE);
-        InputValidator.validatePrice(input);
-        return Integer.parseInt(input);
+        try {
+            String input = getInput(PRICE_MESSAGE);
+            InputValidator.validatePrice(input);
+            return Integer.parseInt(input);
+        }catch(IllegalArgumentException e) {
+            System.out.println("\n" + e.getMessage());
+            return getPrice();
+        }
     }
 
     public static List<Integer> getWinNumbers() {
-        String input = getInput(WIN_NUM_MESSAGE);
-        InputValidator.validateWinNum(input);
-        return Arrays.stream(input.split(",")).map(Integer::parseInt).toList();
+        try {
+            String input = getInput(WIN_NUM_MESSAGE);
+            InputValidator.validateWinNum(input);
+            return Arrays.stream(input.split(",")).map(Integer::parseInt).toList();
+        }catch(IllegalArgumentException e) {
+            System.out.println("\n" + e.getMessage());
+            return getWinNumbers();
+        }
     }
 
     public static int getBonusNumber(List<Integer> winNums) {
-        String input = getInput(BONUS_NUM_MESSAGE);
-        InputValidator.validateBonus(input,winNums);
-        return Integer.parseInt(input);
+        try {
+            String input = getInput(BONUS_NUM_MESSAGE);
+            InputValidator.validateBonus(input,winNums);
+            return Integer.parseInt(input);
+        }catch(IllegalArgumentException e) {
+            System.out.println("\n" + e.getMessage());
+            return getBonusNumber(winNums);
+        }
     }
 
 }
