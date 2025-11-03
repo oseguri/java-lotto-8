@@ -1,5 +1,6 @@
 package lotto;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.assertj.core.api.*;
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class LottoCalculatorTest {
 
     @Test
+    @DisplayName("로또 결과 계산 테스트")
     void calculateTest() {
         List<Lotto> lottoList = new ArrayList<>();
         lottoList.add(new Lotto(List.of(1,2,3,4,5,6)));
