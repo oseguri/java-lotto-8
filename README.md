@@ -97,12 +97,12 @@
 ---
 
 ## 체크리스트
-- [ ] class LottoApplication
-  - [ ] test
-    - [ ] 통합 테스트
-  - [ ] feat
-    - [ ] 전체 기능 수행
+- [x] class Application
+  - [x] feat
+    - [x] 전체 기능 수행
 - [x]  class InputManager
+    - [x] test
+      - [x] 입력이 유효할 때 까지 받는다
     - [x]  feature
         - [x]  입력 및 검증
 - [x] class InputValidator
@@ -119,17 +119,16 @@
         - [x] 랜덤 번호 6개 생성
         - [x] 랜덤 번호 6개 출력
         - [x] Lotto 객체 생성
-- [ ]  class LottoCalculator
-    - [ ]  test
-        - [ ]  클래스 생성 테스트
-        - [ ]  Lotto 객체 결과 계산
-        - [ ]  LottoResult 객체 생성 테스트
+- [x]  class LottoCalculator
+    - [x]  test
+        - [x]  Lotto 객체 결과 계산 
+        - [x]  LottoResult 객체 생성
     - [x]  feature
         - [x]  lotto 객체 결과 계산
         - [x]  LottoResult 객체 생성
 - [x]  class LottoResult
     - [x]  feature
         - [x]  결과 저장
-- [ ]  class LottoResultPrinter
-    - [ ]  feature
-        - [ ]  출력
+- [x]  class LottoResultPrinter
+    - [x]  feature
+        - [x]  출력

@@ -18,11 +18,11 @@ public class LottoResult {
 
 
     public LottoResult(List<Integer> prices) {
-        winningDetails.put(5000, 0);
-        winningDetails.put(50000, 0);
-        winningDetails.put(1500000, 0);
-        winningDetails.put(30000000, 0);
-        winningDetails.put(2000000000, 0);
+        winningDetails.put(LottoPrize.FIFTH, 0);
+        winningDetails.put(LottoPrize.FOURTH, 0);
+        winningDetails.put(LottoPrize.THIRD, 0);
+        winningDetails.put(LottoPrize.SECOND, 0);
+        winningDetails.put(LottoPrize.FIRST, 0);
 
         int purchasePrice = prices.size() * 1000;
         int totalPrice = 0;
