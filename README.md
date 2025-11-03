@@ -132,3 +132,5 @@
 - [x]  class LottoResultPrinter
     - [x]  feature
         - [x]  출력
+
+### [해결과정 - Notion](https://www.notion.so/3-29d30ead56d580e99d79e070dd96d9ce?source=copy_link)
